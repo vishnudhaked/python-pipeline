@@ -11,7 +11,6 @@ try:
     
     ## calling the cp function
     cp()
-except FileExistsError as i:
-    with open(r"/home/ec2-user/file2.txt","a") as i:
-        i.write(b)
-        # print("File data has been copy successfully by append mode")
+except PermissionError:
+    print("Permission denied. You do not have sufficient permissions to access the file.")
+
